@@ -460,8 +460,9 @@ class bus_update22(generics.RetrieveUpdateDestroyAPIView):
 
 def bus_main14(request):
     if request.method=="GET":
-        ad=requests.get(" http://127.0.0.1:8000/bus_home21/")
-        res13=ad.json()
+       # ad=requests.get(" http://127.0.0.1:8000/bus_home21/")
+        #res13=ad.json()
+        res13=bus_icici11.objects.all()
         return render(request,"bus_templates/trendcard11.html",{'res13':res13})
 
 
